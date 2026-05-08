@@ -64,11 +64,18 @@
 </head>
 <body class="bg-slate-950 text-slate-900 antialiased dark:bg-slate-950 dark:text-slate-100">
   <div class="site-shell relative overflow-hidden bg-slate-50 dark:bg-slate-950">
-    <div class="pointer-events-none absolute inset-0 -z-10">
+    <div class="pointer-events-none absolute inset-0 z-0 overflow-hidden">
       <div class="absolute left-[-10rem] top-[-8rem] h-72 w-72 rounded-full bg-sky-400/25 blur-3xl"></div>
       <div class="absolute right-[-8rem] top-20 h-80 w-80 rounded-full bg-blue-500/25 blur-3xl"></div>
       <div class="absolute bottom-[-10rem] left-1/3 h-96 w-96 rounded-full bg-cyan-300/20 blur-3xl"></div>
-      <div class="animated-mesh absolute inset-0 opacity-70 dark:opacity-40"></div>
+      <div class="notebook-lines absolute inset-0 opacity-70 dark:opacity-20"></div>
+      <div class="chalk-vignette absolute inset-0 opacity-0 dark:opacity-100"></div>
+      <div class="animated-mesh absolute inset-0 opacity-85 dark:opacity-45"></div>
+      <div class="education-particles absolute inset-0 opacity-95 dark:opacity-55"></div>
+      <div class="education-icons absolute inset-0 opacity-45 dark:opacity-30"></div>
+      <div class="floating-badge badge-1">A+</div>
+      <div class="floating-badge badge-2"><i class="fa-solid fa-graduation-cap"></i></div>
+      <div class="floating-badge badge-3">ज्ञान</div>
     </div>
 
     <header
@@ -153,7 +160,7 @@
       </div>
     </header>
 
-    <main>
+    <main class="relative z-10">
       <section id="home" class="relative pt-28 sm:pt-32">
         <div class="mx-auto grid max-w-7xl gap-10 px-4 pb-20 pt-8 sm:px-6 lg:grid-cols-[1.1fr_0.9fr] lg:px-8 lg:pb-24">
           <div class="flex flex-col justify-center">
@@ -699,6 +706,14 @@
                     <span>प्रवेश कक्षा</span>
                     <select name="className" required>
                       <option value="">कक्षा चुनें</option>
+                      <option>नर्सरी</option>
+                      <option>LKG</option>
+                      <option>UKG</option>
+                      <option>कक्षा 1</option>
+                      <option>कक्षा 2</option>
+                      <option>कक्षा 3</option>
+                      <option>कक्षा 4</option>
+                      <option>कक्षा 5</option>
                       <option>कक्षा 6</option>
                       <option>कक्षा 7</option>
                       <option>कक्षा 8</option>
@@ -842,7 +857,7 @@
       </section>
     </main>
 
-    <footer class="border-t border-slate-200/70 bg-white/70 py-8 backdrop-blur-xl dark:border-white/10 dark:bg-slate-900/60">
+    <footer class="relative z-10 border-t border-slate-200/70 bg-white/70 py-8 backdrop-blur-xl dark:border-white/10 dark:bg-slate-900/60">
       <div class="mx-auto flex max-w-7xl flex-col gap-5 px-4 sm:px-6 md:flex-row md:items-center md:justify-between lg:px-8">
         <div>
           <h3 class="text-lg font-bold text-slate-900 dark:text-white">श्री गिरधारी तिलकधारी इंटर कॉलेज</h3>
