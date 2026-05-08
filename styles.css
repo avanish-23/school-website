@@ -269,6 +269,42 @@ body {
   filter: saturate(1.08);
 }
 
+.principal-frame {
+  position: relative;
+  min-height: 100%;
+  background:
+    radial-gradient(circle at top, rgba(59, 130, 246, 0.12), transparent 36%),
+    linear-gradient(180deg, rgba(255, 255, 255, 0.8), rgba(219, 234, 254, 0.45));
+}
+
+.principal-frame img {
+  transition: transform 0.6s ease, filter 0.6s ease;
+}
+
+.principal-frame:hover img {
+  transform: scale(1.04);
+  filter: saturate(1.06);
+}
+
+.message-panel {
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  background:
+    linear-gradient(135deg, rgba(255, 255, 255, 0.92), rgba(224, 242, 254, 0.72));
+  box-shadow:
+    0 24px 60px rgba(15, 23, 42, 0.08),
+    inset 0 1px 0 rgba(255, 255, 255, 0.55);
+  backdrop-filter: blur(18px);
+}
+
+.dark .message-panel {
+  border-color: rgba(255, 255, 255, 0.08);
+  background:
+    linear-gradient(180deg, rgba(15, 23, 42, 0.76), rgba(15, 23, 42, 0.62));
+  box-shadow:
+    0 25px 70px rgba(2, 6, 23, 0.42),
+    inset 0 1px 0 rgba(255, 255, 255, 0.05);
+}
+
 .gallery-item {
   position: relative;
   display: block;
