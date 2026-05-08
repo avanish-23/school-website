@@ -259,9 +259,20 @@ themeToggle?.addEventListener("click", () => {
   setTheme(nextTheme);
 });
 
-attachFormValidation(document.getElementById("admissionForm"), (_, form) => {
-  showToast("प्रवेश रुचि सफलतापूर्वक दर्ज हो गई। विद्यालय जल्द संपर्क करेगा।");
+attachFormValidation(document.getElementById("admissionForm"), (formData, form) => {
+  const studentName = formData.get("studentName")?.toString().trim() || "";
+  const guardianName = formData.get("guardianName")?.toString().trim() || "";
+  const phone = formData.get("phone")?.toString().trim() || "";
+  const className = formData.get("className")?.toString().trim() || "";
+  const message = formData.get("message")?.toString().trim() || "कोई अतिरिक्त संदेश नहीं";
+
+  const whatsappText = encodeURIComponent(
+    `नमस्ते, मैं प्रवेश के लिए रुचि दर्ज करना चाहता/चाहती हूँ।%0A%0Aविद्यार्थी का नाम: ${studentName}%0Aअभिभावक का नाम: ${guardianName}%0Aमोबाइल नंबर: ${phone}%0Aप्रवेश कक्षा: ${className}%0Aसंदेश: ${message}`
+  );
+
+  showToast("आपको WhatsApp पर redirect किया जा रहा है...");
   form.reset();
+  window.open(`https://wa.me/919450874431?text=${whatsappText}`, "_blank", "noopener");
 });
 
 attachFormValidation(document.getElementById("contactForm"), (formData, form) => {
