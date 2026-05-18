@@ -270,7 +270,7 @@ attachFormValidation(document.getElementById("admissionForm"), (formData, form) 
     `नमस्ते, मैं प्रवेश के लिए रुचि दर्ज करना चाहता/चाहती हूँ।%0A%0Aविद्यार्थी का नाम: ${studentName}%0Aअभिभावक का नाम: ${guardianName}%0Aमोबाइल नंबर: ${phone}%0Aप्रवेश कक्षा: ${className}%0Aसंदेश: ${message}`
   );
 
-  showToast("आपको WhatsApp पर redirect किया जा रहा है...");
+  showToast("आपको व्हाट्सऐप पर ले जाया जा रहा है...");
   form.reset();
   window.open(`https://wa.me/919450874431?text=${whatsappText}`, "_blank", "noopener");
 });
@@ -284,7 +284,7 @@ attachFormValidation(document.getElementById("contactForm"), (formData, form) =>
     `नमस्ते, मैं ${name} बोल रहा/रही हूँ। मेरा नंबर ${phone} है। ${message}`
   );
 
-  showToast("आपको WhatsApp पर redirect किया जा रहा है...");
+  showToast("आपको व्हाट्सऐप पर ले जाया जा रहा है...");
   form.reset();
   window.open(`https://wa.me/919450874431?text=${whatsappText}`, "_blank", "noopener");
 });
