@@ -8,10 +8,10 @@ const scrollTopBtn = document.getElementById("scrollTopBtn");
 const navbar = document.getElementById("navbar");
 
 const typedWords = [
-  "अनुशासन और संस्कार",
-  "आधुनिक शिक्षा वातावरण",
-  "प्रेरणादायी विद्यालय परिसर",
-  "उज्ज्वल भविष्य की मजबूत नींव"
+  "अनुशासन और संस्कार / Discipline & Values",
+  "आधुनिक शिक्षा वातावरण / Modern Learning",
+  "प्रेरणादायी विद्यालय परिसर / Inspiring Campus",
+  "उज्ज्वल भविष्य की मजबूत नींव / Bright Future"
 ];
 
 let wordIndex = 0;
@@ -94,7 +94,7 @@ function attachFormValidation(form, onSuccess) {
     });
 
     if (!isFormValid) {
-      showToast("कृपया सभी आवश्यक जानकारी सही तरीके से भरें।");
+      showToast("कृपया सभी आवश्यक जानकारी सही तरीके से भरें। / Please fill all required details correctly.");
       return;
     }
 
@@ -264,13 +264,13 @@ attachFormValidation(document.getElementById("admissionForm"), (formData, form) 
   const guardianName = formData.get("guardianName")?.toString().trim() || "";
   const phone = formData.get("phone")?.toString().trim() || "";
   const className = formData.get("className")?.toString().trim() || "";
-  const message = formData.get("message")?.toString().trim() || "कोई अतिरिक्त संदेश नहीं";
+  const message = formData.get("message")?.toString().trim() || "कोई अतिरिक्त संदेश नहीं / No additional message";
 
   const whatsappText = encodeURIComponent(
-    `नमस्ते, मैं प्रवेश के लिए रुचि दर्ज करना चाहता/चाहती हूँ।%0A%0Aविद्यार्थी का नाम: ${studentName}%0Aअभिभावक का नाम: ${guardianName}%0Aमोबाइल नंबर: ${phone}%0Aप्रवेश कक्षा: ${className}%0Aसंदेश: ${message}`
+    `नमस्ते, मैं प्रवेश के लिए रुचि दर्ज करना चाहता/चाहती हूँ।%0AHello, I would like to submit an admission enquiry.%0A%0Aविद्यार्थी का नाम / Student Name: ${studentName}%0Aअभिभावक का नाम / Guardian Name: ${guardianName}%0Aमोबाइल नंबर / Mobile Number: ${phone}%0Aप्रवेश कक्षा / Admission Class: ${className}%0Aसंदेश / Message: ${message}`
   );
 
-  showToast("आपको WhatsApp पर redirect किया जा रहा है...");
+  showToast("आपको व्हाट्सऐप पर ले जाया जा रहा है... / Redirecting to WhatsApp...");
   form.reset();
   window.open(`https://wa.me/919450874431?text=${whatsappText}`, "_blank", "noopener");
 });
@@ -281,10 +281,10 @@ attachFormValidation(document.getElementById("contactForm"), (formData, form) =>
   const message = formData.get("message")?.toString().trim() || "";
 
   const whatsappText = encodeURIComponent(
-    `नमस्ते, मैं ${name} बोल रहा/रही हूँ। मेरा नंबर ${phone} है। ${message}`
+    `नमस्ते, मैं ${name} बोल रहा/रही हूँ। मेरा नंबर ${phone} है।%0AHello, this is ${name}. My number is ${phone}.%0Aसंदेश / Message: ${message}`
   );
 
-  showToast("आपको WhatsApp पर redirect किया जा रहा है...");
+  showToast("आपको व्हाट्सऐप पर ले जाया जा रहा है... / Redirecting to WhatsApp...");
   form.reset();
   window.open(`https://wa.me/919450874431?text=${whatsappText}`, "_blank", "noopener");
 });
